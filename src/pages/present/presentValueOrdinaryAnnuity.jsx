@@ -6,12 +6,12 @@ const PresentValueOrdinaryAnnuity = () => {
 
   const handleCalculate = (e) => {
     e.preventDefault();
-    const r = parseFloat(e.target.r.value) / 100; // Convert percentage to decimal
+    const r = parseFloat(e.target.r.value); // Keep the raw percentage input directly
     const pmt = parseFloat(e.target.pmt.value);
     const n = parseInt(e.target.n.value, 10);
     
     if (!isNaN(r) && !isNaN(pmt) && !isNaN(n)) {
-      const result = formula(r, pmt, n);
+      const result = formula(r / 100, pmt, n); // Convert to decimal only for calculation
       alert(`Present Value: ${result.toFixed(2)}`); // Fixed to 2 decimal places for currency format
     } else {
       alert('Please enter valid inputs');
@@ -35,6 +35,7 @@ const PresentValueOrdinaryAnnuity = () => {
           placeholder="Enter Payment (PMT)"
           required
           className="border p-2 rounded w-full"
+          step="any" // Allow for decimal values
         />
         <input
           type="number"
@@ -42,6 +43,7 @@ const PresentValueOrdinaryAnnuity = () => {
           placeholder="Enter Interest Rate (%)"
           required
           className="border p-2 rounded w-full"
+          step="any" // Allow for decimal values
         />
         <input
           type="number"
