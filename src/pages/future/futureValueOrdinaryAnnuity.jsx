@@ -8,6 +8,11 @@ const FutureValueOrdinaryAnnuity = () => {
   // State to hold the future value result
   const [futureValue, setFutureValue] = useState(null);
 
+  // Utility function to format number with commas
+  const formatNumber = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   // Formula to calculate the future value of an ordinary annuity
   const formula = (p, r, n) => {
     if (r === 0) {
@@ -51,7 +56,7 @@ const FutureValueOrdinaryAnnuity = () => {
 
       // Set the steps to state
       setSteps(calculationSteps);
-      setFutureValue(result.toFixed(2)); // Save the formatted future value for display
+      setFutureValue(formatNumber(result.toFixed(2))); // Format the future value with commas
     } else { 
       alert('Please enter valid inputs');
     }
@@ -71,14 +76,14 @@ const FutureValueOrdinaryAnnuity = () => {
         <input
           type="number"
           name="p"
-          placeholder="Enter Payment (P):"
+          placeholder="Enter Periodic Payment (P):"
           required
           className="border p-2 rounded w-full"
         />
         <input
           type="number"
           name="i"
-          placeholder="Enter Annual Interest Rate (i):"
+          placeholder="Enter Interest Rate (i):"
           step="any" // Allow decimal input
           required
           className="border p-2 rounded w-full"
@@ -86,7 +91,7 @@ const FutureValueOrdinaryAnnuity = () => {
         <input
           type="number"
           name="m"
-          placeholder="Enter Compounding Periods per Year (m):"
+          placeholder="Enter Compounding Periods (m):"
           required
           className="border p-2 rounded w-full"
         />
@@ -108,9 +113,9 @@ const FutureValueOrdinaryAnnuity = () => {
       {/* Display steps of the calculation */}
       <div className="mt-6 text-left">
         <strong>Periodic Payment (P): </strong> {inputValues.p} <br />
-        <strong>Annual Interest Rate (i): </strong> {inputValues.i} <br />
-        <strong>Compounding Periods per Year (m): </strong> {inputValues.m} <br />
-        <strong>Number of Years (t): </strong> {inputValues.t} <br />
+        <strong>Interest Rate (i): </strong> {inputValues.i} <br />
+        <strong>Number of Compounding Periods (m): </strong> {inputValues.m} <br />
+        <strong>Terms in years (t): </strong> {inputValues.t} <br />
         <h3 className="text-xl font-semibold text-blue-800">Calculation Steps:</h3>
         <ul className="list-decimal pl-5">
           {steps.map((step, index) => (
