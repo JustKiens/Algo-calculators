@@ -78,7 +78,7 @@ const FutureValueOrdinaryAnnuity = () => {
         <input
           type="number"
           name="i"
-          placeholder="Enter Annual Interest Rate:"
+          placeholder="Enter Annual Interest Rate (i):"
           step="any" // Allow decimal input
           required
           className="border p-2 rounded w-full"
