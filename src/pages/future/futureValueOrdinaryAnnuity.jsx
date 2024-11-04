@@ -115,7 +115,7 @@ const FutureValueOrdinaryAnnuity = () => {
         <strong>Periodic Payment (P): </strong> {inputValues.p} <br />
         <strong>Interest Rate (i): </strong> {inputValues.i} <br />
         <strong>Number of Compounding Periods (m): </strong> {inputValues.m} <br />
-        <strong>Terms in years (t): </strong> {inputValues.t} <br />
+        <strong>Term in years (t): </strong> {inputValues.t} <br />
         <h3 className="text-xl font-semibold text-blue-800">Calculation Steps:</h3>
         <ul className="list-decimal pl-5">
           {steps.map((step, index) => (
