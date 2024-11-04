@@ -71,14 +71,14 @@ const FutureValueOrdinaryAnnuity = () => {
         <input
           type="number"
           name="p"
-          placeholder="Enter Payment (P)"
+          placeholder="Enter Payment (P):"
           required
           className="border p-2 rounded w-full"
         />
         <input
           type="number"
           name="i"
-          placeholder="Enter Annual Interest Rate (%)"
+          placeholder="Enter Annual Interest Rate:"
           step="any" // Allow decimal input
           required
           className="border p-2 rounded w-full"
@@ -86,14 +86,14 @@ const FutureValueOrdinaryAnnuity = () => {
         <input
           type="number"
           name="m"
-          placeholder="Enter Compounding Periods per Year (m)"
+          placeholder="Enter Compounding Periods per Year (m):"
           required
           className="border p-2 rounded w-full"
         />
         <input
           type="number"
           name="t"
-          placeholder="Enter Number of Years (t)"
+          placeholder="Enter Number of Years (t):"
           required
           className="border p-2 rounded w-full"
         />
