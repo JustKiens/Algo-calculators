@@ -10,8 +10,8 @@ function App() {
       {/* Navbar */}
       <nav className="bg-gray-800 p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-white text-2xl font-bold">
-          Future Value Ordinary Annuity
+          <Link to="/future-value-ordinary-annuit" className="text-white text-2xl font-bold">
+          Future Value of Simple Annuity
           </Link>
           <div>
           </div>
