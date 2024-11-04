@@ -19,7 +19,7 @@ const FutureValueOrdinaryAnnuity = () => {
   const handleCalculate = (e) => {
     e.preventDefault();
     const p = parseFloat(e.target.p.value);
-    const i = parseFloat(e.target.i.value);// Convert percentage to decimal
+    const i = parseFloat(e.target.i.value); // Use raw input for interest rate
     const m = parseInt(e.target.m.value, 10);
     const t = parseInt(e.target.t.value, 10);
 
@@ -33,7 +33,7 @@ const FutureValueOrdinaryAnnuity = () => {
       const result = formula(p, r, n);
 
       // Store input values for display
-      setInputValues({ p, i: i * 100, m, t });
+      setInputValues({ p, i, m, t });
 
       // Step-by-step calculation
       calculationSteps.push(`Step 1: Calculate Future Value`);
@@ -79,7 +79,7 @@ const FutureValueOrdinaryAnnuity = () => {
           type="number"
           name="i"
           placeholder="Enter Annual Interest Rate (%)"
-          step="0.01"
+          step="any" // Allow decimal input
           required
           className="border p-2 rounded w-full"
         />
