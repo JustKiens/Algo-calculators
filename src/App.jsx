@@ -11,7 +11,7 @@ function App() {
       <nav className="bg-gray-800 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/future-value-ordinary-annuity" className="text-white text-2xl font-bold">
-            Future Value of Ordinary Annuity
+            Future Value of Simple Annuity
           </Link>
           {/* Uncomment below if you need a link for Future Value Annuity Due */}
           {/* <Link to="/future-value-annuity-due" className="text-white text-2xl font-bold">
