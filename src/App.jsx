@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FutureValueOrdinaryAnnuity from './pages/future/futureValueOrdinaryAnnuity';
 import FutureValueAnnuityDue from './pages/future/futureValueAnnuityDue';
-import LandingPage from './pages/LandingPage'; // Import the new LandingPage component
+import LandingPage from './pages/landingPage'; // Import the new LandingPage component
 import './index.css'; // Ensure Tailwind CSS is imported
 
 function App() {
