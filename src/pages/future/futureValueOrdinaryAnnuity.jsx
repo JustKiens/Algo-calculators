@@ -59,9 +59,9 @@ const FutureValueOrdinaryAnnuity = () => {
 
   return (
     <div className="text-center p-6 bg-green-50 min-h-screen">
-      <h2 className="text-3xl font-bold mb-4 text-blue-800">Future Value of Ordinary Annuity</h2>
+      <h2 className="text-3xl font-bold mb-4 text-blue-800">Future Value of Simple Annuity</h2>
       <p className="text-blue-600 mb-4">
-        The future value of an ordinary annuity is calculated using the formula:
+        The Future Value of simple annuity is calculated using the formula:
       </p>
       <p className="text-blue-600 mb-6">
         <strong>FV = P * ((1 + r)^n - 1) / r</strong>
