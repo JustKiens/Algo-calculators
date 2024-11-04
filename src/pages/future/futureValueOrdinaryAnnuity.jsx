@@ -19,7 +19,7 @@ const FutureValueOrdinaryAnnuity = () => {
   const handleCalculate = (e) => {
     e.preventDefault();
     const p = parseFloat(e.target.p.value);
-    const i = parseFloat(e.target.i.value) / 100; // Convert percentage to decimal
+    const i = parseFloat(e.target.i.value);// Convert percentage to decimal
     const m = parseInt(e.target.m.value, 10);
     const t = parseInt(e.target.t.value, 10);
 
