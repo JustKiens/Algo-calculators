@@ -56,7 +56,7 @@ const FutureValueOrdinaryAnnuity = () => {
 
       // Set the steps to state
       setSteps(calculationSteps);
-      setFutureValue(formatNumber(result.toFixed(2))); // Format the future value with commas
+      setFutureValue(formatNumber(parseFloat(result).toFixed(2))); // Format the future value with commas
     } else { 
       alert('Please enter valid inputs');
     }
