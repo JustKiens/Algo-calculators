@@ -111,18 +111,18 @@ const FutureValueOrdinaryAnnuity = () => {
       </form>
 
       {/* Display steps of the calculation */}
-      <div className="mt-6 text-left">
-        <strong>Periodic Payment (P): </strong> {inputValues.p} <br />
-        <strong>Interest Rate (i): </strong> {inputValues.i} <br />
-        <strong>Number of Compounding Periods (m): </strong> {inputValues.m} <br />
-        <strong>Term in years (t): </strong> {inputValues.t} <br />
-        <h3 className="text-xl font-semibold text-blue-800">Calculation Steps:</h3>
-        <ul className="list-decimal pl-5">
-          {steps.map((step, index) => (
-            <li key={index} className="text-blue-600">{step}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="mt-6 text-left">
+      <strong>Periodic Payment (P): </strong> {inputValues.p ? parseFloat(inputValues.p).toFixed(2) : ''} <br />
+      <strong>Interest Rate (i): </strong> {inputValues.i ? parseFloat(inputValues.i).toFixed(2) : ''} <br />
+      <strong>Number of Compounding Periods (m): </strong> {inputValues.m} <br />
+      <strong>Term in years (t): </strong> {inputValues.t} <br />
+      <h3 className="text-xl font-semibold text-blue-800">Calculation Steps:</h3>
+      <ul className="list-decimal pl-5">
+        {steps.map((step, index) => (
+          <li key={index} className="text-blue-600">{step}</li>
+        ))}
+      </ul>
+    </div>
 
       {/* Display the final result */}
       {futureValue !== null && (
