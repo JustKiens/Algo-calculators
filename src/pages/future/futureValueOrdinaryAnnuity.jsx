@@ -49,8 +49,8 @@ const FutureValueOrdinaryAnnuity = () => {
       } else {
         calculationSteps.push(`Future Value = P * ((1 + r)^n - 1) / r`);
         calculationSteps.push(`1 + r = ${1 + r}`);
-        calculationSteps.push(`(1 + r)^n = ${(Math.pow(1 + r, n)).toFixed(9)};
-        calculationSteps.push(`((1 + r)^n - 1) = ${(Math.pow(1 + r, n) - 1).toFixed(9)};
+        calculationSteps.push(`(1 + r)^n = ${(Math.pow(1 + r, n)).toFixed(9)`);};
+        calculationSteps.push(`((1 + r)^n - 1) = ${(Math.pow(1 + r, n) - 1).toFixed(9)}`);;
         calculationSteps.push(`Future Value = ${p} * ((1 + r)^n - 1) / r = ${result}`);
       }
 
