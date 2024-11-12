@@ -24,40 +24,39 @@ const FutureValueOrdinaryAnnuity = () => {
   const handleCalculate = (e) => {
     e.preventDefault();
     const p = parseFloat(e.target.p.value);
-    const i = parseFloat(e.target.i.value);
+    const i = parseFloat(e.target.i.value); // Use raw input for interest rate
     const m = parseInt(e.target.m.value, 10);
     const t = parseInt(e.target.t.value, 10);
-  
+
     // Calculate r and n based on input values
     const r = i / m;  // Effective interest rate per period
     const n = t * m;  // Total number of periods
-  
+
     if (!isNaN(p) && !isNaN(i) && !isNaN(m) && !isNaN(t)) {
       // Clear previous steps
       const calculationSteps = [];
       const result = formula(p, r, n);
-  
+
       // Store input values for display
       setInputValues({ p, i, m, t });
-  
-      // Step-by-step calculation with two-decimal formatting
+
+      // Step-by-step calculation
       calculationSteps.push(`Step 1: Calculate Future Value`);
-      calculationSteps.push(`r = i / m = ${i} / ${m} = ${r.toFixed(2)}`);
+      calculationSteps.push(`r = i / m = ${i} / ${m} = ${r}`);
       calculationSteps.push(`n = t * m = ${t} * ${m} = ${n}`);
-      
       if (r === 0) {
-        calculationSteps.push(`Future Value = P * n = ${p} * ${n} = ${result.toFixed(2)}`);
+        calculationSteps.push(`Future Value = P * n = ${p} * ${n} = ${result}`);
       } else {
         calculationSteps.push(`Future Value = P * ((1 + r)^n - 1) / r`);
-        calculationSteps.push(`1 + r = ${(1 + r).toFixed(2)}`);
-        calculationSteps.push(`(1 + r)^n = ${(Math.pow(1 + r, n)).toFixed(2)}`);
-        calculationSteps.push(`((1 + r)^n - 1) = ${(Math.pow(1 + r, n) - 1).toFixed(2)}`);
-        calculationSteps.push(`Future Value = ${p} * ((1 + r)^n - 1) / r = ${result.toFixed(2)}`);
+        calculationSteps.push(`1 + r = ${1 + r}`);
+        calculationSteps.push(`(1 + r)^n = ${(1 + r) ** n}`);
+        calculationSteps.push(`((1 + r)^n - 1) = ${(1 + r) ** n - 1}`);
+        calculationSteps.push(`Future Value = ${p} * ((1 + r)^n - 1) / r = ${result}`);
       }
-  
+
       // Set the steps to state
       setSteps(calculationSteps);
-      setFutureValue(formatNumber(result.toFixed(2))); // Format the future value with commas
+      setFutureValue(formatNumber(parseFloat(result).toFixed(2))); // Format the future value with commas
     } else { 
       alert('Please enter valid inputs');
     }
