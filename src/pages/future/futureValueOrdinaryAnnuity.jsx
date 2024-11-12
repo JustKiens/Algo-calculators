@@ -112,8 +112,8 @@ const FutureValueOrdinaryAnnuity = () => {
 
       {/* Display steps of the calculation */}
     <div className="mt-6 text-left">
-      <strong>Periodic Payment (P): </strong> {inputValues.p ? parseFloat(inputValues.p).toFixed(2) : ''} <br />
-      <strong>Interest Rate (i): </strong> {inputValues.i ? parseFloat(inputValues.i).toFixed(2) : ''} <br />
+      <strong>Periodic Payment (P): </strong> {inputValues.p: ''} <br />
+      <strong>Interest Rate (i): </strong> {inputValues.i: ''} <br />
       <strong>Number of Compounding Periods (m): </strong> {inputValues.m} <br />
       <strong>Term in years (t): </strong> {inputValues.t} <br />
       <h3 className="text-xl font-semibold text-blue-800">Calculation Steps:</h3>
